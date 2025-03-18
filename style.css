@@ -1,0 +1,89 @@
+:root {
+  --night-rider: #090604;
+  --casablanca: #fab354;
+  --dandelion: #fbd659;
+  --tan-hide: #f7934d;
+  --cape-palliser: #9a703c;
+  --driftwood: #ac8c4e;
+  --bull-shot: #835122;
+  --rob-roy: #eac380;
+  --kumera: #8c631d;
+  --flint: #746c64;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--night-rider);
+}
+
+header {
+  height: 80px; 
+  padding: 0.5rem 1rem; 
+}
+
+.navbar-brand img {
+  width: 200px; 
+  height: auto; 
+}
+
+.navbar-nav {
+  gap: 1rem; 
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+  color: var(--night-rider);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--dandelion);
+  transform: translateY(-3px); 
+}
+
+.nav-link i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover i {
+  transform: scale(1.2);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--tan-hide);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%; 
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    gap: 0.5rem; 
+  }
+
+  .nav-link {
+    font-size: 0.9rem; 
+    padding: 0.5rem;
+  }
+
+  .nav-link i {
+    font-size: 1rem; 
+  }
+}
